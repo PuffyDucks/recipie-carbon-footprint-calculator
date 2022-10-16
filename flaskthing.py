@@ -17,9 +17,10 @@ def home():
         ingredients[ingredient] = ""
         ingredients = convert_dictionary(ingredients)
         found_ingredients = get_ingredients(ingredients, df)
+        found_ingredients_html = found_ingredients.to_html()
+        print(found_ingredients_html)
         emissions = get_emissions(found_ingredients)
         total_emissions = get_total_emissions(emissions)
-
 
         #working on trying to pass other info (feed, farm, processing, transport, etc) into index.html
         ingredient_list = dictionary_to_list(ingredient)
@@ -28,9 +29,8 @@ def home():
         for x in target_ingredients:
             more_info.append(x)
 
-
-                                            #this is where you pass the parameters into index.html
-        return render_template("index.html", total_emissions=total_emissions, more_info=target_ingredients)
+        #this is where you pass the parameters into index.html
+        return render_template("index.html", total_emissions=total_emissions, more_info=target_ingredients, table=found_ingredients_html)
 
     else:
         return render_template("index.html")
