@@ -1,0 +1,73 @@
+body {
+    background-color: #2d1f61;
+    color: white;
+    line-height: 2;
+}
+
+#userinput {
+    background-color: #513d99;
+    border: none;
+    color: white;
+    padding: 15px;
+    padding-left: 30px;
+}
+
+#userinput, ::placeholder {
+    color: #E9E9E9;
+    font-size: 25px;
+}
+
+#calc {
+    background-color: #A863FF;
+    color: white;
+    font-size: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+#header {
+    margin-bottom: 45px;
+    background-color: #FFFFFF;
+}
+
+#title {
+    font-size: 30px;
+    color: #3a2978;
+    padding: 20px;
+}
+
+button {
+    margin: 20px;
+}
+
+#textbox {
+    padding-right: 35px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 2.5;
+    margin-left: 20px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+td {
+    padding: 30px;
+    font-size: 20px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}  
+
+table {
+    margin-top: 40px;
+}
