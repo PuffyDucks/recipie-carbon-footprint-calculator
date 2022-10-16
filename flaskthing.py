@@ -37,7 +37,7 @@ def home():
         return render_template("index.html", total_emissions=total_emissions,  table=found_ingredients_html, text=ingredient, foods=foodsList, emissions=emissionsList)
 
     else:
-        return render_template("index.html")
+        return render_template("index.html", foods=0, emissions=0)
 
 @app.route("/<test>")
 def user(test):
