@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casual</title>
+    <link rel="icon" href="media/icon.png">
+    <link rel="stylesheet" type="text/css" href="src/style.css" title="style"/>
+    <script src="src/howler/dist/howler.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body onload="loadElements()">
+    <script>
+        const {Howl, Howler} = require('howler');
+    </script>
+    <!-- todo: add instructions, questions randomizer, more questions, edit player names, cookies, reset button -->
+    <div id="main">
+        <br><br><br><br><br><br><br><br><br><br>
+        <p id="progress" style="font-size: 40px">Process of Elimination</p>
+        <p id="qstn" style="font-size: 22px;">Made by PuffyDucks</p>
+        <button class="nav" id="cas" onclick="window.location.href='casual.html'">Casual</button>
+        <button class="nav" id="comp"onclick="window.location.href='deathmatch.html'">Deathmatch</button>
+    </div>
+</body>
+</html>
