@@ -71,3 +71,11 @@ table, th, td {
 table {
     margin-top: 40px;
 }
+
+.fa-burger {
+    margin-right: 15px;
+}
+
+#pieChart {
+    margin-top: 70px;
+}
