@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,18 +21,20 @@
     <div class="container">
         <div class="row">
             <div class="col-7 text-center" id="textbox">
-                <textarea class="w-100 rounded" rows="8" id="userinput" placeholder="Enter ingredients here"></textarea>
-                <button type="button" class="btn col-5" id="calc">Calculate</button>
+                <form action ="#" method="post">
+                    <p><input type="text" name="userinput" /></p>
+                    <p><input type="submit" value="submit" /></p>
+                </form>
             </div>
             <div class="col-5">
-                <h3>Heres some title text</h3>
+                <h3>Heres some title text {{more_info}}</h3>
                 <p>In this section we’ll have some other text to describe instructions or something for our website so the user can better understand the website.</p>
             </div>
         </div>
     </div>
     <br><br>
     <div class="container">
-        <h2>Your meal has a carbon footprint of 300 kg CO2</h2>
+        <h2>Your meal has a carbon footprint of {{total_emissions}} kg CO2</h2>
         <table>
             <tr>
                 <td>test1</td>
