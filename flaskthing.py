@@ -12,7 +12,7 @@ def home():
         #sets ingredient to the input value from textbox
         ingredient = request.form["userinput"]
         if len(ingredient) == 0:
-            return render_template("index.html", total_emissions=0, more_info="dummy")
+            return render_template("index.html", total_emissions=0, text="", foods=0, emissions=0)
         #adds the ingredient to the dictionary so it can be a parameter for get_ingredients
         ingredients[ingredient] = ""
         ingredients = convert_dictionary(ingredients)
@@ -22,6 +22,10 @@ def home():
         emissions = get_emissions(found_ingredients)
         total_emissions = get_total_emissions(emissions)
 
+        # arrays for javascript to make piechart
+        foodsList = get_foods_only(found_ingredients)
+        emissionsList = get_emissions_only(found_ingredients)
+
         #working on trying to pass other info (feed, farm, processing, transport, etc) into index.html
         ingredient_list = dictionary_to_list(ingredient)
         target_ingredients = get_ingredients(ingredient_list, df)
@@ -30,7 +34,7 @@ def home():
             more_info.append(x)
 
         #this is where you pass the parameters into index.html
-        return render_template("index.html", total_emissions=total_emissions, more_info=target_ingredients, table=found_ingredients_html, text=ingredient)
+        return render_template("index.html", total_emissions=total_emissions,  table=found_ingredients_html, text=ingredient, foods=foodsList, emissions=emissionsList)
 
     else:
         return render_template("index.html")

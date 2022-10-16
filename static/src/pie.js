@@ -1,5 +1,5 @@
-let ingredients = ["Flour", "Bananas", "Apples", "Beef", "Cheese"];
-let emissions = [12, 20, 10, 33, 25];
+let ingredients = foodsList;
+let emissions = emissionsList;
 let sliceColor = "#eed11e";
 
 setTimeout(() => {

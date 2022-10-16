@@ -65,6 +65,16 @@ def dictionary_to_list(dictionary):
         count += 1
     return(splitlist)
 
+def get_emissions_only(target_ingredients):
+    emissions_only = []
+    emissions_only = list(target_ingredients['Total from Land to Retail'])
+    return emissions_only
+
+def get_foods_only(target_ingredients):
+    foods_only = []
+    foods_only = list(target_ingredients['Food product'])
+    return foods_only
+
 def main():
 
     # import data into df
