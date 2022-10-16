@@ -12,6 +12,7 @@ def get_ingredients(ingredients, df):
         else:
             print(i + " is not in the database")
 
+    target_ingredients = target_ingredients.drop(['Unit of GHG Emissions'], axis=1)
     return target_ingredients
 
 # return ingredient emissions as a dict #takes data frame returns dictionary values are emissions
@@ -22,8 +23,6 @@ def get_emissions(target_ingredients):
 
 # get total emissions of meal #returns float input is dictionary
 def get_total_emissions(ingredients_emissions):
-
-    print(type(ingredients_emissions))
 
     total_emissions = sum(ingredients_emissions.values())
     return round(total_emissions, 3)
@@ -62,14 +61,9 @@ def dictionary_to_list(dictionary):
     splitlist = list[0].split(",")
     count = 0
     for x in splitlist:
-        splitlist[count] = x.strip();
+        splitlist[count] = x.strip()
         count += 1
     return(splitlist)
-
-
-
-
-
 
 def main():
 
@@ -82,15 +76,12 @@ def main():
 
     # get specific ingredients emissions
     ingredients_emissions = get_emissions(target_ingredients)
-    print(ingredients_emissions)
 
     # get total emissions
     total_emissions = get_total_emissions(ingredients_emissions)
-    print(total_emissions)
 
     # get percent total emissions for each ingredient
     percent_total_emissions = get_percentages(ingredients_emissions, total_emissions)
-    print(percent_total_emissions)
 
     testdict = {"Apples, Bananas,Mango"}
     print(target_ingredients)
