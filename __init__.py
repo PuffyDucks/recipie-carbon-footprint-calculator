@@ -39,19 +39,6 @@ def home():
     else:
         return render_template("index.html", foods=0, emissions=0)
 
-@app.route("/<test>")
-def user(test):
-    return f"<h1>{test}</h1>"
-
-
 
 if __name__ == ("__main__"):
-    app.run(debug=True)
-
-
     app.run()
-    # ingredients = {"Apples": ""}
-    # target_ingredients = get_ingredients(ingredients, df)
-    # print(target_ingredients)
-    # {"Apples, Bananas": }
-
