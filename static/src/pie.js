@@ -25,4 +25,4 @@ setTimeout(() => {
             borderWidth: 5
         }
     });
-}, 300);
+}, 500);

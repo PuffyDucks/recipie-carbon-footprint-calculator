@@ -30,7 +30,7 @@ def home():
 
 
                                             #this is where you pass the parameters into index.html
-        return render_template("index.html", total_emissions=total_emissions, more_info=target_ingredients)
+        return render_template("index.html", total_emissions=total_emissions, more_info=target_ingredients, text=ingredient)
 
     else:
         return render_template("index.html")
