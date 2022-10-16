@@ -25,6 +25,8 @@
                     <p><input type="text" name="userinput" /></p>
                     <p><input type="submit" value="submit" /></p>
                 </form>
+                <textarea class="w-100 rounded" rows="8" id="userinput" placeholder="Enter ingredients here"></textarea>
+                <button type="button" class="btn col-5" id="calc" onclick="showResults()">Calculate</button>
             </div>
             <div class="col-5">
                 <h3>Heres some title text {{more_info}}</h3>
@@ -33,26 +35,65 @@
         </div>
     </div>
     <br><br>
-    <div class="container">
-        <h2>Your meal has a carbon footprint of 300 kg CO2</h2>
-        <table>
-            <tr>
-                <td>test1</td>
-                <td>test2</td>
-                <td>test3</td>
-                <td>test4</td>
-                <td>test5</td>
-                <td>test6</td>
-            </tr>
-            <tr>
-                <td>test7</td>
-                <td>test8</td>
-                <td>test9</td>
-                <td>test10</td>
-                <td>test11</td>
-                <td>test12</td>
-            </tr>
-        </table>
+
+    <div class="container text-center" id="results">
+        <div class="row">
+            <div class="col-8">
+                <h2>Your meal has a carbon footprint of {{total_emissions}} kg CO2</h2>
+                <table class="w-100">
+                    <tr>
+                        <td>test1</td>
+                        <td>test2</td>
+                        <td>test3</td>
+                        <td>test4</td>
+                        <td>test5</td>
+                        <td>test6</td>
+                    </tr>
+                    <tr>
+                        <td>test7</td>
+                        <td>test8</td>
+                        <td>test9</td>
+                        <td>test10</td>
+                        <td>test11</td>
+                        <td>test12</td>
+                    </tr>
+                    <tr>
+                        <td>test7</td>
+                        <td>test8</td>
+                        <td>test9</td>
+                        <td>test10</td>
+                        <td>test11</td>
+                        <td>test12</td>
+                    </tr>
+                    <tr>
+                        <td>test7</td>
+                        <td>test8</td>
+                        <td>test9</td>
+                        <td>test10</td>
+                        <td>test11</td>
+                        <td>test12</td>
+                    </tr>
+                    <tr>
+                        <td>test7</td>
+                        <td>test8</td>
+                        <td>test9</td>
+                        <td>test10</td>
+                        <td>test11</td>
+                        <td>test12</td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>example</li>
+                    <li>example</li>
+                    <li>example</li>
+                    <li>example</li>
+                    <li>example</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <canvas id="pieChart" class="w-100"></canvas>
+            </div>
+>>>>>>> 4600ec3a92c8f05bbcdf82cfcb17ef28f864caeb
     </div>
     <br><br><br><br>
     <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
