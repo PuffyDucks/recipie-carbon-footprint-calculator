@@ -30,7 +30,7 @@ def get_total_emissions(ingredients_emissions):
 def main():
 
     # import data into df
-    df = pd.read_csv("/Users/claire/Documents/Projects/recipe_emissions/Food_Product_Emissions.csv")
+    df = pd.read_csv("Food_Product_Emissions.csv")
 
     # get specific ingredients
     ingredients = {"Apples", "Bananas"}
