@@ -11,6 +11,8 @@ def home():
         ingredients = {}
         #sets ingredient to the input value from textbox
         ingredient = request.form["userinput"]
+        if len(ingredient) == 0:
+            return render_template("index.html", total_emissions=0, more_info="dummy")
         #adds the ingredient to the dictionary so it can be a parameter for get_ingredients
         ingredients[ingredient] = ""
         ingredients = convert_dictionary(ingredients)

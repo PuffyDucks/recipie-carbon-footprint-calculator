@@ -26,7 +26,7 @@ def get_total_emissions(ingredients_emissions):
     print(type(ingredients_emissions))
 
     total_emissions = sum(ingredients_emissions.values())
-    return total_emissions
+    return round(total_emissions, 3)
 
 # get percent of total emissions of each ingredient as a dict #param dictionary returns percentage
 def get_percentages(ingredients_emissions, total_emissions):
